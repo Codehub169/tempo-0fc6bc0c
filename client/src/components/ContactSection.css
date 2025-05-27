@@ -18,17 +18,17 @@
   font-family: 'Raleway', sans-serif;
   font-size: 2.8rem;
   color: #333333; /* Charcoal */
-  margin-bottom: 20px;
+  margin-bottom: 25px; 
   font-weight: 600;
 }
 
 .contact-intro {
   font-family: 'Lato', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem; 
   color: #555555;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 50px auto; 
+  line-height: 1.8;
 }
 
 .contact-form-container {
@@ -39,19 +39,19 @@
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: left;
-  border: 1px solid #EEEEEE; /* Light Grey border for note feel */
+  border: 1px solid #EEEEEE; 
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .form-group label {
   display: block;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem; 
   color: #333333;
-  margin-bottom: 8px;
+  margin-bottom: 10px; 
   font-weight: 600;
 }
 
@@ -59,14 +59,14 @@
 .form-group input[type="email"],
 .form-group textarea {
   width: 100%;
-  padding: 15px;
-  border: 1px solid #DDDDDD;
-  border-radius: 4px;
+  padding: 16px; 
+  border: 1px solid #D0D0D0; 
+  border-radius: 6px; 
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   color: #333333;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input[type="text"]:focus,
@@ -74,11 +74,11 @@
 .form-group textarea:focus {
   border-color: #48A9A6; /* Muted Teal */
   outline: none;
-  box-shadow: 0 0 0 2px rgba(72, 169, 166, 0.2);
+  box-shadow: 0 0 0 3px rgba(72, 169, 166, 0.25); 
 }
 
 .form-group textarea {
-  min-height: 150px;
+  min-height: 160px;
   resize: vertical;
 }
 
@@ -87,11 +87,11 @@
   background-color: #48A9A6; /* Muted Teal */
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  font-size: 1.05rem; 
   font-weight: 600;
-  padding: 15px 35px;
+  padding: 16px 40px; 
   border: none;
-  border-radius: 50px; /* Playful pill shape */
+  border-radius: 6px; /* More standard professional radius */
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -133,29 +133,38 @@
 }
 
 .contact-footer {
-  margin-top: 60px;
+  margin-top: 70px; 
+  padding-top: 30px; 
+  border-top: 1px solid #DDDDDD; 
   text-align: center;
+}
+
+.contact-footer p { 
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 15px; 
 }
 
 .instagram-link {
   display: inline-flex;
   align-items: center;
   font-family: 'Raleway', sans-serif;
-  color: #333333;
+  color: #333333; 
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem; 
+  font-weight: 500; 
   transition: color 0.3s ease;
 }
 
 .instagram-link svg {
-  margin-right: 8px;
-  width: 24px;
-  height: 24px;
-  /* stroke: currentColor; is set in the SVG component and will inherit from <a> */
+  margin-right: 10px; 
+  width: 24px; 
+  height: 24px; 
 }
 
 .instagram-link:hover {
-  color: #48A9A6; /* Text and SVG stroke will inherit this color */
+  color: #48A9A6; 
 }
 
 .optional-link {
@@ -185,22 +194,38 @@
   }
 
   .contact-intro {
-    font-size: 1rem;
+    font-size: 1.1rem; 
+    max-width: 90%;
   }
 
   .contact-form-container {
     padding: 30px;
   }
+  .form-group label {
+    font-size: 0.95rem;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    padding: 14px;
+  }
+  .cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 2rem; 
+  }
+   .contact-intro {
+    font-size: 1rem;
   }
 
   .cta-button {
     padding: 12px 25px;
-    font-size: 0.9rem;
+    font-size: 0.95rem; 
   }
 
   .form-group input[type="text"],
@@ -208,5 +233,11 @@
   .form-group textarea {
     padding: 12px;
     font-size: 0.95rem;
+  }
+  .contact-footer p {
+    font-size: 0.95rem;
+  }
+  .instagram-link {
+    font-size: 1rem;
   }
 }
