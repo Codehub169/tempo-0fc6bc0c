@@ -1,0 +1,109 @@
+/* src/components/AnimatedLogo.css */
+.animated-logo-container {
+  width: 200px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hueneu-logo-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animation: Sequential reveal of 'hue' and 'neu' parts */
+/* This assumes the SVG has elements with these IDs or classes if animated directly */
+/* For the placeholder, we'll animate the opacity of the whole SVG and potentially use pseudo-elements or a more complex SVG for parts */
+
+/* Simple fade in for the whole logo for now, can be expanded with specific SVG structure */
+.animated-logo-container .hueneu-logo-svg {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.animated-logo-container.animate .hueneu-logo-svg {
+  animation: fadeInLogo 1s ease-out forwards;
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* If logo_animated_placeholder.svg had #hue and #neu IDs */
+/* 
+.animated-logo-container .hueneu-logo-svg #hue-path, 
+.animated-logo-container .hueneu-logo-svg #neu-path {
+  opacity: 0;
+  stroke-dasharray: 500; 
+  stroke-dashoffset: 500;
+}
+
+.animated-logo-container.animate .hueneu-logo-svg #hue-path {
+  animation: drawIn 1s ease-out forwards, fadeInPath 0.5s 0.8s ease-out forwards; 
+}
+
+.animated-logo-container.animate .hueneu-logo-svg #neu-path {
+  animation: drawIn 1s ease-out 0.5s forwards, fadeInPath 0.5s 1.3s ease-out forwards; 
+}
+
+@keyframes drawIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInPath {
+  to {
+    opacity: 1;
+    fill-opacity: 1; 
+  }
+}
+*/
+
+/* Styling for the SVG text elements if used inline */
+/*
+.logo-hue {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 300; 
+  fill: #333333;
+  opacity: 0;
+}
+
+.logo-neu {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 600; 
+  fill: #333333; 
+  opacity: 0;
+}
+
+.animated-logo-container.animate .logo-hue {
+  animation: revealText 0.8s ease-out 0.2s forwards;
+}
+
+.animated-logo-container.animate .logo-neu {
+  animation: revealText 0.8s ease-out 0.7s forwards;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/

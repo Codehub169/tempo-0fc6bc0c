@@ -1,0 +1,108 @@
+/* src/components/WhyHueneuSection.css */
+.why-hueneu-section {
+  padding: 100px 5%;
+  background-color: #EEEEEE; /* Light Grey */
+  text-align: center;
+  overflow: hidden; /* Ensures animations don't cause scrollbars */
+}
+
+.why-hueneu-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-hueneu-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #333333; /* Charcoal */
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.why-hueneu-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-hueneu-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem; /* Larger for poetic feel */
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Staggered animation delays */
+.why-hueneu-text.poetic-1.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.why-hueneu-text.poetic-2.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* Delay after previous element */
+}
+
+.why-hueneu-text.poetic-3.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s; /* Delay after previous element */
+}
+
+.why-hueneu-text .highlight {
+  font-weight: 600;
+  color: #48A9A6; /* Muted Teal */
+  font-style: italic;
+}
+
+.why-hueneu-text .highlight-alt {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  border-bottom: 2px solid #48A9A6;
+  padding-bottom: 2px;
+}
+
+.why-hueneu-text .hueneu-emphasis {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  /* color: #48A9A6; */ /* Optional: could use teal or keep charcoal */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-hueneu-section {
+    padding: 80px 5%;
+  }
+
+  .why-hueneu-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .why-hueneu-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-hueneu-section {
+    padding: 60px 5%;
+  }
+  .why-hueneu-title {
+    font-size: 1.8rem;
+  }
+  .why-hueneu-text {
+    font-size: 1.15rem;
+  }
+}

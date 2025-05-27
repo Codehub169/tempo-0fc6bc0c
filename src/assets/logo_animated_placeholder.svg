@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <style>
+    .hue-text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 38px;
+      font-weight: 300; /* Lighter for 'hue' */
+      fill: #333333; /* Charcoal */
+    }
+    .neu-text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 38px;
+      font-weight: 600; /* Bolder for 'neu' */
+      fill: #48A9A6; /* Muted Teal for a subtle pop on 'neu' */
+    }
+    /* For animation purposes, if CSS targets these classes directly from an inline SVG */
+    /* For external SVG via <img>, these styles provide base appearance */
+  </style>
+  <text x="5" y="38" class="hue-text" id="logo-hue-element">hue</text>
+  <text x="80" y="38" class="neu-text" id="logo-neu-element">neu</text>
+</svg>
