@@ -1,9 +1,9 @@
 // src/components/AnimatedLogo.js
 import React from 'react';
-import './AnimatedLogo.css';
-import LogoSvg from '../assets/logo_animated_placeholder.svg'; // Import the SVG
+import './AnimatedLogo.css'; // Will resolve to src/components/AnimatedLogo.css
+import LogoSvg from '../assets/logo_animated_placeholder.svg'; // Will resolve to src/assets/logo_animated_placeholder.svg
 
-const AnimatedLogo = ({ isVisible }) => {
+const AnimatedLogo = ({ isVisible = false }) => {
   return (
     <div className={`animated-logo-container ${isVisible ? 'animate' : ''}`}>
       {/* Using img tag for SVG to allow CSS targeting if SVG structure is complex, 
