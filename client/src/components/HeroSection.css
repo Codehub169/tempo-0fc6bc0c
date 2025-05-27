@@ -1,0 +1,138 @@
+/* client/src/components/HeroSection.css */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  background-color: #F8F8F8; /* Background Neutral */
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents scrollbars from animations */
+  position: relative; /* For scroll indicator positioning */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.hero-section.is-visible {
+  opacity: 1;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.hero-section.is-visible .hero-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-logo-container {
+  margin-bottom: 30px;
+  width: 150px; 
+  height: 100px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-tagline {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.8rem;
+  color: #333333; /* Accent Neutral */
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+
+.hero-section.is-visible .hero-tagline {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-subtext {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  color: #555555; /* Slightly lighter than Accent Neutral */
+  font-weight: 300;
+  margin-bottom: 40px;
+  max-width: 500px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out 0.7s, transform 1s ease-out 0.7s;
+}
+
+.hero-section.is-visible .hero-subtext {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease-out 1s;
+  border-radius: 50%; /* Add focus styling for accessibility */
+}
+
+.scroll-down-indicator:focus-visible {
+  outline: 2px solid #48A9A6; /* Vibrant Pop for focus */
+  outline-offset: 2px;
+}
+
+
+.hero-section.is-visible .scroll-down-indicator {
+  opacity: 1;
+}
+
+.scroll-down-indicator svg {
+  width: 30px;
+  height: 30px;
+  /* fill is not used as paths are lines */
+  stroke: #333333; /* Ensure stroke is defined if paths use it */
+  transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.scroll-down-indicator:hover svg {
+  transform: translateY(5px);
+  stroke: #48A9A6; /* Vibrant Pop */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Tablet */
+  .hero-tagline {
+    font-size: 2.2rem;
+  }
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+  .hero-logo-container {
+    width: 120px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .hero-tagline {
+    font-size: 1.8rem;
+  }
+  .hero-subtext {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  .scroll-down-indicator svg {
+    width: 24px;
+    height: 24px;
+  }
+}
